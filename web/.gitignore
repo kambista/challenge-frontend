@@ -1,0 +1,36 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+test-results/
+playwright-report/
+*.tsbuildinfo
+dist
+
+# Node dependencies
+node_modules
+.design-reference/
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# IA
+
+.agents
+
+
+# Test coverage
+coverage/

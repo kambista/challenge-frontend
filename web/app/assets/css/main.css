@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+@import '@fontsource/montserrat/400.css';
+@import '@fontsource/montserrat/500.css';
+@import '@fontsource/montserrat/600.css';
+@import '@fontsource/montserrat/700.css';
+
+/* Figma > Documentación > Colores. */
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --color-primary: #00e3c2;
+  --color-primary-soft: #b2e7df;
+  --color-secondary: #060f26;
+  --color-secondary-light: #2d313d;
+  --color-secondary-muted: #606b89;
+  --color-gray-60: #686868;
+  --color-gray-40: #a7a7a7;
+  --color-gray-25: #e0e0e0;
+  --color-gray-21: #ededed;
+  --color-gray-20: #eff0f6;
+  --color-gray-10: #f6f6f9;
+  --color-success: #05be50;
+  --color-success-soft: #d9ffe8;
+  --color-danger: #ff3d4a;
+  --color-danger-soft: #f1e1e4;
+  --color-info: #456dd3;
+  --color-info-soft: #d2e9ff;
+  --color-info-subtle: #e8eef4;
+  --color-warning: #874400;
+  --color-warning-soft: #f8f0e9;
+  --color-login-top: #303d81;
+  --color-login-bottom: #182230;
+  --radius-control: 8px;
+  --radius-panel: 16px;
+}
+
+@layer base {
+  .document-number-field > label {
+    visibility: hidden;
+  }
+  body {
+    @apply bg-gray-10 text-secondary m-0 font-sans font-medium antialiased;
+  }
+  button,
+  a,
+  input,
+  select {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button:not(:disabled),
+  select {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-info);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--color-primary-soft);
+    color: var(--color-secondary);
+  }
+  input {
+    caret-color: var(--color-secondary);
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+  input[type='date'] {
+    color-scheme: light;
+  }
+  input[type='date']::-webkit-calendar-picker-indicator {
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+    cursor: pointer;
+    opacity: 0.72;
+  }
+}
